@@ -6,6 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  
 }
 
 datasource db {
@@ -16,6 +17,6 @@ datasource db {
 model Table {
   id       String    @id @default(auto()) @map("_id") @db.ObjectId
   originalUrl String
-  shortenUrl String
+  shortUrl String
 }
 
