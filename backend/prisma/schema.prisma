@@ -18,5 +18,6 @@ model Table {
   id       String    @id @default(auto()) @map("_id") @db.ObjectId
   originalUrl String
   shortUrl String
+  shortId String
 }
 
