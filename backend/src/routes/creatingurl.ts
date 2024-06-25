@@ -8,32 +8,33 @@ const created:Router = Router();
 const prisma = new PrismaClient();
 
 created.post("/",async (req:Request,res:Response)=>{
-    const url = req.body;
-    const shortId = uuidv4();
-    const shortUrl = `http://localhost:300/${shortId}`;
+    const url = req.body;   
+    const shortId = uuidv4();   
+    const shortUrl = `http://localhost:3000/${shortId}`;
+    
     try{
         const existingUrl = await prisma.table.findFirst({
             where:{
-                originalUrl:url
+                originalUrl:url.originalUrl
             },
             select:{
                 shortUrl: true
             }
         })
-        if(!existingUrl){
+        if(existingUrl){
             return res.json({
-                shortUrl: existingUrl
+                shortUrl: existingUrl.shortUrl
             })
         }
         const newUrl = await prisma.table.create({
             data:{
-                originalUrl: url,
+                originalUrl: url.originalUrl,
                 shortId:shortId,
                 shortUrl:shortUrl
             }
         })
         return res.json({
-            shortUrl:shortUrl 
+            shortUrl:newUrl.shortUrl 
         })
 
     } catch(error){
