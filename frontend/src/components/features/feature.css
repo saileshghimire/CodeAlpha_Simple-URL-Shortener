@@ -1,0 +1,52 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 2px 4px #ccc;
+    margin: 20px 45px;
+
+}
+.feature div {
+    text-align: center;
+    padding: 40px;
+}
+
+.feature__heading {
+    font-size: 30px;
+    font-family: var(--font-family);
+    font-weight: 500;
+}
+
+.feature__url-input{
+    justify-content: center;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+.feature__url-input input {
+    width: 400px;
+    height: 45px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+.feature__url-input button{
+    width: 70px;
+    height: 45px;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-family);
+    background-color: var(--color-text);
+    color: #fff;
+    font-size: medium;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}

@@ -1,0 +1,44 @@
+/* div {
+    text-align: center;
+    padding: 40px;
+} */
+
+.Shortened__heading{
+    font-size: 30px;
+    font-family: var(--font-family);
+    font-weight: 500;
+}
+
+.shorten__url-output {
+    justify-content: center;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.shorten__url-output input {
+    width: 400px;
+    height: 45px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+
+.shorten__url-output button {
+    width: 70px;
+    height: 45px;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-family);
+    background-color: var(--color-text);
+    color: #fff;
+    font-size: medium;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
