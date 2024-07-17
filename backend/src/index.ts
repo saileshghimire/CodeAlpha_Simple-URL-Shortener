@@ -1,9 +1,10 @@
 import express,{ Express,Request,Response} from 'express';
 import created from './routes/creatingurl';
 import hitting from './routes/hittingurl';
-
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 

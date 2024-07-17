@@ -1,6 +1,6 @@
 import { Router,Request,Response } from "express";
 import { PrismaClient } from "@prisma/client";
-import { v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4} from 'uuid';
 
 
 const created:Router = Router();
@@ -8,6 +8,8 @@ const created:Router = Router();
 const prisma = new PrismaClient();
 
 created.post("/",async (req:Request,res:Response)=>{
+    console.log('called');
+    
     const url = req.body;   
     const shortId = uuidv4();   
     const shortUrl = `http://localhost:3000/${shortId}`;

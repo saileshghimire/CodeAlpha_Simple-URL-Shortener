@@ -4,18 +4,23 @@ import './feature.css';
 import axios from 'axios';
 import Shorten from './Shorten';
 
-const handleSubmit = async (e) =>{
-    const respone = await axios.post('http://localhost:5000/api/v1/creatingurl',
-        {
-            originalUrl: Url
-        }
-    );
-    setShortUrl(respone.data.shortUrl);
-}
+
 
 const Feature = ()=>{
     const [url, setUrl] = useState('');
     const [shortUrl, setShortUrl] = useState('');
+
+    const handleSubmit = async () =>{
+        console.log("called");
+        console.log(url);
+        const respone = await axios.post('http://localhost:3000/api/v1/creatingurl',
+            {
+            originalUrl: url
+            }
+        );
+        setShortUrl(respone.data.shortUrl);
+    }
+
     return(
         <div className='feature'>
             {shortUrl ?(

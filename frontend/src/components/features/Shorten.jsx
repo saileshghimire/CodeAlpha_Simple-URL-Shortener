@@ -2,6 +2,11 @@ import { useState } from 'react';
 import './shorten.css';
 
 const Shorten = ({shortUrl}) =>{
+
+    const copyToClipboard =()=>{
+        navigator.clipboard.writeText(shortUrl);
+    }
+
     return(<div>  
     <div className='Shortened__heading'>
         Your shortened URL
@@ -14,8 +19,6 @@ const Shorten = ({shortUrl}) =>{
     )
 }
 
-const copyToClipboard =({shortUrl})=>{
-    navigator.clipboard.writeText(shortUrl);
-}
+
 
 export default Shorten;

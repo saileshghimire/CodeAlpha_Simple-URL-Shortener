@@ -15,6 +15,7 @@ const uuid_1 = require("uuid");
 const created = (0, express_1.Router)();
 const prisma = new client_1.PrismaClient();
 created.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log('called');
     const url = req.body;
     const shortId = (0, uuid_1.v4)();
     const shortUrl = `http://localhost:3000/${shortId}`;
